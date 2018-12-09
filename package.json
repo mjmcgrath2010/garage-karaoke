@@ -2,6 +2,9 @@
   "name": "garage-karoke",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "8.10.0"
+  },
   "dependencies": {
     "keystone": "4.0.0-beta.5",
     "lodash": "^4.13.1",
