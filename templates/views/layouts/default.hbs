@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Garage Karaoke</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 		<link href="/styles/site.css" rel="stylesheet">
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
@@ -99,6 +100,12 @@
 			//- them specifically here, instead of bootstrap-3.3.5.min.js
 		--}}
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 		{{{isAdminEditorJS user}}}
+		<script>
+			$(document).ready( function () {
+				$('#songTable').DataTable();
+			});
+		</script>
 	</body>
 </html>
