@@ -28,5 +28,5 @@ Song.schema.virtual('canAccessKeystone').get(function () {
 /**
  * Registration
  */
-Song.defaultColumns = 'Title, Artist, Disk Number';
+Song.defaultColumns = 'title, artist, diskNumber';
 Song.register();
