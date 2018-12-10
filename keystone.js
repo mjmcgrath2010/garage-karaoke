@@ -11,8 +11,8 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-	'name': 'Garage Karoke',
-	'brand': 'Garage Karoke',
+	'name': 'Garage Karaoke',
+	'brand': 'Garage Karaoke',
 
 	'sass': 'public',
 	'static': 'public',
@@ -58,6 +58,9 @@ keystone.set('nav', {
 	users: 'users',
 	songs: 'songs',
 });
+
+keystone.set('admin path', 'admin');
+keystone.set('signin logo', '/images/logo.png');
 
 // Start Keystone to connect to your database and initialise the web server
 
