@@ -5840,3 +5840,7 @@ body {
 
 #songTable {
   padding: auto 1em; }
+
+@media (min-width: 768px) {
+  .navbar-right {
+    margin-right: 0; } }
