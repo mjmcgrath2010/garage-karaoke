@@ -8,6 +8,7 @@
  * modules in your project's /lib directory.
  */
 var _ = require('lodash');
+var keystone = require('keystone');
 
 
 /**
@@ -27,6 +28,36 @@ exports.initLocals = function (req, res, next) {
 	next();
 };
 
+exports.socketIO = function (req, res, next) {
+	var Party = keystone.list('Party');
+	var io = keystone.get('io');
+	
+	Party.model.find({}, function (err, party) {
+		
+		if (err) {
+			console.log(err);
+			next()
+		}
+
+		if (party && party.length) {
+			res.locals.party = party[0]['id'];
+			// Socketio connection
+			io.on('connect', function(socket) {
+				console.log('--- User connected');
+				socket.emit('partyId', res.locals.party);
+				
+				socket.on('addToQueue', function(msg){
+					console.log('message: ' + msg);
+				});
+
+				socket.on('disconnect', function(){
+					console.log('--- User disconnected');
+				});
+			});
+		}
+		next();
+	});
+};
 
 /**
 	Fetches and clears the flashMessages before a view is rendered
