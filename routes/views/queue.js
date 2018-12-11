@@ -10,10 +10,14 @@ exports = module.exports = function (req, res) {
 	// Socketio connection
 	io.on('connect', function(socket){
 		console.log('--- User connected');
-
+		socket.on('addToQueue', function(msg){
+			console.log('message: ' + msg);
+		});
 		socket.on('disconnect', function(){
 			console.log('--- User disconnected');
 		});
+
+		socket.emit('addToQueue','hello from server');
 	});
 
 	// locals.section is used to set the currently selected
