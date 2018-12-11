@@ -76,4 +76,12 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 }
 
 
-keystone.start();
+var socketio = require('socket.io');
+keystone.start({
+	onHttpServerCreated: function(){
+		keystone.set('io', socketio.listen(keystone.httpServer));
+	},
+	onStart: function(){
+	
+	}
+});
