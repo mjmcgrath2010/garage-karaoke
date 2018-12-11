@@ -33,6 +33,10 @@ exports.socketIO = function (req, res, next) {
 	var Queue = keystone.list('Queue');
 	var io = keystone.get('io');
 	
+	if (keystone.get('ioConnected') === true) {
+		return next();
+	}
+	
 	Party.model.find({}, function (err, party) {
 		
 		if (err) {
@@ -44,7 +48,8 @@ exports.socketIO = function (req, res, next) {
 			res.locals.party = party[0]['id'];
 			// Socketio connection
 			io.on('connect', function(socket) {
-				console.log('--- User connected');
+				keystone.set('ioConnected', true);
+				
 				socket.emit('partyId', res.locals.party);
 				
 				socket.on('addToQueue', function(msg){

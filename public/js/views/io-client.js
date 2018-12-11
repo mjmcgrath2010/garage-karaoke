@@ -1,6 +1,5 @@
 var socket = io();
 
-
 socket.on('partyId', function(msg){
 	console.log('party ID is: ' + msg);
 });
