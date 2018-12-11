@@ -70,7 +70,7 @@ exports.socketIO = function (req, res, next) {
 							socket.emit(err);
 							next();
 						}
-						socket.emit('songAdded', doc);
+						io.sockets.emit('songAdded', doc);
 					});
 				});
 

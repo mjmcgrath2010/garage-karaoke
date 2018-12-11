@@ -13,11 +13,10 @@ socket.on('partyId', function(msg){
 });
 
 socket.on('songAdded', function(msg) {
-	console.log('Song Added: ' + JSON.stringify(msg));
 	table.rows.add([{
-		name: msg.name,
-		title: msg.title,
-		artist: msg.artist
+		0: msg.name,
+		1: msg.title,
+		2: msg.artist
 	}]).draw();
 });
 
