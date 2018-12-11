@@ -100,15 +100,6 @@
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
 		<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 		{{{isAdminEditorJS user}}}
-		<script>
-			$(document).ready( function () {
-				var table = $('#songTable').DataTable();
-
-				$('#songTable tbody').on('click', 'tr', function () {
-					var data = table.row( this ).data();
-					alert( 'Fake adding '+ data[0] +' to the song queue');
-				});
-			});
-		</script>
+		{{{isDataTablesJS songs}}}
 	</body>
 </html>

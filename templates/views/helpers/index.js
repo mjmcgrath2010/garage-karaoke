@@ -326,5 +326,18 @@ module.exports = function () {
 		return obj._[underscoreMethod].format();
 	};
 
+	// block rendering for keystone admin js
+	_helpers.isDataTablesJS = function (songs, options) {
+		var output = '';
+		if (typeof (songs) !== 'undefined' && songs.length) {
+			output = scriptTemplate({
+				src: '/js/views/songs.js',
+			});
+		}
+		return new hbs.SafeString(output);
+	};
+	
+	
+
 	return _helpers;
 };

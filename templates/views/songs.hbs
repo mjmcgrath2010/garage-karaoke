@@ -1,7 +1,7 @@
 {{!< default}}
 <div class="container-fluid">
 	{{#if songs}}
-		<table id="songTable" class="display" style="width:100%">
+		<table id="songTable" class="display hide" style="width:100%">
 			<thead>
 			<tr>
 				<th>Song</th>
@@ -19,6 +19,7 @@
 			{{/each}}
 			</tbody>
 		</table>
+		{{>addSong}}
 	{{else}}
 		<h2>No songs to display. Please add songs.</h2>
 	{{/if}}
