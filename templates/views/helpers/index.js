@@ -336,20 +336,6 @@ module.exports = function () {
 		}
 		return new hbs.SafeString(output);
 	};
-
-	_helpers.isSocketIO = function (view) {
-		var output = '';
-		if (view === 'socketIO') {
-			output = scriptTemplate({
-				src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js',
-			});
-			output += scriptTemplate({
-				src: '/js/views/io-client.js',
-			});
-		}
-		return new hbs.SafeString(output);
-	};
-	
 	
 
 	return _helpers;

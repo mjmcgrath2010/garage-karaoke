@@ -1,6 +1,6 @@
 var socket = io();
 socket.emit('addToQueue','hello');
 
-socket.on('addToQueue', function(msg){
-	console.log('message  from server: ' + msg);
+socket.on('partyId', function(msg){
+	console.log('party ID is: ' + msg);
 });
