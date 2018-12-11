@@ -30,13 +30,14 @@ exports.initLocals = function (req, res, next) {
 
 exports.socketIO = function (req, res, next) {
 	var Party = keystone.list('Party');
+	var Queue = keystone.list('Queue');
 	var io = keystone.get('io');
 	
 	Party.model.find({}, function (err, party) {
 		
 		if (err) {
 			console.log(err);
-			next()
+			next();
 		}
 
 		if (party && party.length) {
@@ -47,7 +48,26 @@ exports.socketIO = function (req, res, next) {
 				socket.emit('partyId', res.locals.party);
 				
 				socket.on('addToQueue', function(msg){
-					console.log('message: ' + msg);
+					var data = msg;
+					var song;
+					
+					if (!data.title, !data.artist, !data.name) {
+						return;
+					}
+					
+					song = new Queue.model({
+						title: data.title,
+						artist: data.artist,
+						name: data.name,
+					});
+					
+					song.save(function(err) {
+						if (err) {
+							socket.emit(err);
+							next();
+						}
+						socket.emit('songAdded', data);
+					});
 				});
 
 				socket.on('disconnect', function(){
