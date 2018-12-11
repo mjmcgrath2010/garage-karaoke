@@ -75,7 +75,7 @@ exports.socketIO = function (req, res, next) {
 				});
 
 				socket.on('disconnect', function(){
-					console.log('--- User disconnected');
+					// console.log('--- User disconnected');
 				});
 			});
 		}

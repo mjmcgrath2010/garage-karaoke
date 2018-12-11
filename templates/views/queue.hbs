@@ -1,4 +1,25 @@
 {{!< default}}
 <div>
-	<h1>Song queue.</h1>
+	{{#if queue}}
+		<table id="queueTable" class="display hide" style="width:100%">
+			<thead>
+			<tr>
+				<th>Name</th>
+				<th>Song</th>
+				<th>Artist</th>
+			</tr>
+			</thead>
+			<tbody>
+			{{#each queue}}
+				<tr>
+					<td>{{name}}</td>
+					<td>{{title}}</td>
+					<td>{{artist}}</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+	{{else}}
+		<h2>No active Karaoke sessions.</h2>
+	{{/if}}
 </div>
