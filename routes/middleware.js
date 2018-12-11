@@ -53,25 +53,24 @@ exports.socketIO = function (req, res, next) {
 				socket.emit('partyId', res.locals.party);
 				
 				socket.on('addToQueue', function(msg){
-					var data = msg;
 					var song;
 					
-					if (!data.title, !data.artist, !data.name) {
+					if (!msg.title, !msg.artist, !msg.name) {
 						return;
 					}
 					
 					song = new Queue.model({
-						title: data.title,
-						artist: data.artist,
-						name: data.name,
+						title: msg.title,
+						artist: msg.artist,
+						name: msg.name,
 					});
 					
-					song.save(function(err) {
+					song.save(function(err, doc) {
 						if (err) {
 							socket.emit(err);
 							next();
 						}
-						socket.emit('songAdded', data);
+						socket.emit('songAdded', doc);
 					});
 				});
 
