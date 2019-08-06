@@ -32,13 +32,13 @@ exports.socketIO = function (req, res, next) {
 	var Party = keystone.list('Party');
 	var Queue = keystone.list('Queue');
 	var io = keystone.get('io');
-	
+
 	if (keystone.get('ioConnected') === true) {
 		return next();
 	}
-	
+
 	Party.model.find({}, function (err, party) {
-		
+
 		if (err) {
 			console.log(err);
 			next();
@@ -49,22 +49,23 @@ exports.socketIO = function (req, res, next) {
 			// Socketio connection
 			io.on('connect', function(socket) {
 				keystone.set('ioConnected', true);
-				
+
 				socket.emit('partyId', res.locals.party);
-				
+
 				socket.on('addToQueue', function(msg){
 					var song;
-					
-					if (!msg.title, !msg.artist, !msg.name) {
+
+					if (!msg.title, !msg.artist, !msg.name, !msg.name) {
 						return;
 					}
-					
+
 					song = new Queue.model({
 						title: msg.title,
 						artist: msg.artist,
 						name: msg.name,
+						disk: msg.disk
 					});
-					
+
 					song.save(function(err, doc) {
 						if (err) {
 							socket.emit(err);

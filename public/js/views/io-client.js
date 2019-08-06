@@ -16,14 +16,16 @@ socket.on('songAdded', function(msg) {
 	table.rows.add([{
 		0: msg.name,
 		1: msg.title,
-		2: msg.artist
+		2: msg.artist,
+		3: msg.disk,
 	}]).draw();
 });
 
-$('#addSong').click(function(){
+$('#addSong').click(function () {
 	var title = $('#title').html(),
 		artist = $('#artist').html(),
-		name =  $('#name').val();
-	socket.emit('addToQueue', { title: title, name: name, artist: artist });
+		name =  $('#name').val(),
+		disk = $('#disk').html();
+	socket.emit('addToQueue', { title: title, name: name, artist: artist, disk: disk });
 	$('#songModal').modal('hide');
 });
