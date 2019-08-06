@@ -1,20 +1,19 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
+const keystone = require('keystone');
 
 /**
  * Song Model
  * ==========
  */
-var Song = new keystone.List('Song', {
+const Song = new keystone.List('Song', {
 	autokey: { path: 'slug', from: 'title', unique: true },
 	map: { name: 'title' },
 	defaultSort: '-createdAt',
 });
 
 Song.add({
-	title: { type: String, required: true, index: true, initial: true },
-	artist: { type: String, required: true, index: true, initial: true },
-	diskNumber: { type: String, required: true, index: true, initial: true },
+	title: { type: String, required: true, initial: true },
+	artist: { type: String, required: true, initial: true },
+	diskNumber: { type: String, required: true, initial: true },
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true },
 });

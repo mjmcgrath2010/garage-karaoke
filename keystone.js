@@ -34,6 +34,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'port': 3010,
 });
 
 // Load your project's Models
@@ -79,7 +80,7 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 
 var socketio = require('socket.io');
 keystone.start({
-	onHttpServerCreated: function(){
+	onHttpServerCreated: function () {
 		keystone.set('io', socketio.listen(keystone.httpServer));
 	},
 	onStart: function(){
