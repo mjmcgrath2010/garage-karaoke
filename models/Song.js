@@ -5,13 +5,13 @@ const keystone = require('keystone');
  * ==========
  */
 const Song = new keystone.List('Song', {
-	autokey: { path: 'slug', from: 'title', unique: true },
+	autokey: { path: 'slug', from: 'title'},
 	map: { name: 'title' },
-	defaultSort: '-createdAt',
+	defaultSort: 'title',
 });
 
 Song.add({
-	title: { type: String, required: true, initial: true },
+	title: { type: String, required: true, index: true, initial: true },
 	artist: { type: String, required: true, initial: true },
 	diskNumber: { type: String, required: true, initial: true },
 }, 'Permissions', {
