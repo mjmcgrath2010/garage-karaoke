@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": "10.16.0"
+    "node": "^10.16.0"
   },
   "dependencies": {
     "async": "2.1.4",
@@ -26,6 +26,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node keystone.js"
+    "start": "node keystone.js",
+    "dev": "nodemon keystone.js"
   }
 }
