@@ -13,7 +13,7 @@ exports = module.exports = function (req, res) {
 		
 		if (docs && docs.length) {
 			locals.queue = docs;
-			locals.isAdmin = req.user && req.user.isAdmin;
+			locals.isAdmin = req.user && req.user.isAdmin || false;
 		}
 		
 		console.log(docs)

@@ -52,7 +52,7 @@ exports.socketIO = function (req, res, next) {
 
 				socket.emit('partyId', res.locals.party);
 
-				socket.on('addToQueue', function(msg){
+				socket.on('addToQueue', function(msg) {
 					var song;
 
 					if (!msg.title, !msg.artist, !msg.name, !msg.name) {
@@ -72,6 +72,17 @@ exports.socketIO = function (req, res, next) {
 							next();
 						}
 						io.sockets.emit('songAdded', doc);
+					});
+				});
+
+				socket.on('songComplete', function (msg) {
+					var id = msg.id;
+
+					Queue.model.findOneAndRemove({ _id: id }, function (err, res) {
+						if (err) {
+							return console.log(err);
+						}
+						socket.emit('songRemoved', res);
 					});
 				});
 

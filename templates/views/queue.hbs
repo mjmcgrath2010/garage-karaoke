@@ -1,6 +1,6 @@
 {{!< default}}
 <div>
-	{{#if queue}}
+	{{#if isAdmin}}
 		<table id="queueTable" class="display hide" style="width:100%">
 			<thead>
 			<tr>
@@ -8,25 +8,44 @@
 				<th>Song</th>
 				<th>Artist</th>
 				<th>Disk Number</th>
-				{{#if isAdmin}}
-					<th>Complete</th>
-				{{/if}}
+				<th>Complete</th>
 			</tr>
 			</thead>
 			<tbody>
 			{{#each queue}}
-				<tr>
+				<tr id={{_id}}>
 					<td>{{name}}</td>
 					<td>{{title}}</td>
 					<td>{{artist}}</td>
 					<td>{{disk}}</td>
+                    <td>
+                        <input type="checkbox" class="completed" id={{_id}}>
+                    </td>
 			{{/each}}
-				{{#if isAdmin}}
-						<td><input type="checkbox"></td>
-				{{/if}}
 				</tr>
 			</tbody>
 		</table>
+	{{else if queue}}
+        <table id="queueTable" class="display hide" style="width:100%">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Song</th>
+                <th>Artist</th>
+                <th>Disk Number</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each queue}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{title}}</td>
+                    <td>{{artist}}</td>
+                    <td>{{disk}}</td>
+            {{/each}}
+                </tr>
+            </tbody>
+        </table>
 	{{else}}
 		<h2>No active Karaoke sessions.</h2>
 	{{/if}}

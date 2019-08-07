@@ -12,13 +12,22 @@ socket.on('partyId', function(msg){
 	console.log('party ID is: ' + msg);
 });
 
-socket.on('songAdded', function(msg) {
+socket.on('songAdded', function (msg) {
 	table.rows.add([{
 		0: msg.name,
 		1: msg.title,
 		2: msg.artist,
 		3: msg.disk,
 	}]).draw();
+});
+
+$('.completed').click(function () {
+	var id = $(this).attr('id');
+	socket.emit('songComplete', { id: id });
+});
+
+socket.on('songRemoved', function(msg) {
+	table.rows('#' + msg._id).remove().draw();
 });
 
 $('#addSong').click(function () {
