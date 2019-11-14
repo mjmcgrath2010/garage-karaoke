@@ -3631,21 +3631,10 @@ grappling-hook@3.0.0:
     async "^0.9.0"
     lodash "^3.9.3"
 
-handlebars@4.0.6:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.6.tgz#2ce4484850537f9c97a8026d5399b935c4ed4ed7"
-  integrity sha1-LORISFBTf5yXqAJtU5m5NcTtTtc=
-  dependencies:
-    async "^1.4.0"
-    optimist "^0.6.1"
-    source-map "^0.4.4"
-  optionalDependencies:
-    uglify-js "^2.6"
-
-handlebars@^4.0.5:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.1.2.tgz#b6b37c1ced0306b221e094fc7aca3ec23b131b67"
-  integrity sha512-nvfrjqvt9xQ8Z/w0ijewdD/vvWDTOweBUm96NTr66Wfvo1mJenBLwcYmPs3TIBP5ruzYGD7Hx/DaM9RmhroGPw==
+handlebars@4.5.2, handlebars@^4.0.5:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.2.tgz#5a4eb92ab5962ca3415ac188c86dc7f784f76a0f"
+  integrity sha512-29Zxv/cynYB7mkT1rVWQnV7mGX6v7H/miQ6dbEpYTKq5eJBN7PsRB+ViYJlcT6JINTSu4dVB9kOqEun78h6Exg==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
@@ -7386,7 +7375,7 @@ source-map-url@^0.4.0:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
 
-source-map@^0.4.2, source-map@^0.4.4:
+source-map@^0.4.2:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
   integrity sha1-66T12pwNyZneaAMti092FzZSA2s=
@@ -7998,7 +7987,7 @@ ua-parser-js@^0.7.18:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"
   integrity sha512-8OaIKfzL5cpx8eCMAhhvTlft8GYF8b2eQr6JkCyVdrgjcytyOmPCXrqXFcUnhonRpLlh5yxEZVohm6mzaowUOw==
 
-uglify-js@^2.4.1, uglify-js@^2.6:
+uglify-js@^2.4.1:
   version "2.8.29"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.29.tgz#29c5733148057bb4e1f75df35b7a9cb72e6a59dd"
   integrity sha1-KcVzMUgFe7Th913zW3qcty5qWd0=
