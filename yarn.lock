@@ -1834,18 +1834,19 @@ cloudinary-microurl@1.0.2:
   resolved "https://registry.yarnpkg.com/cloudinary-microurl/-/cloudinary-microurl-1.0.2.tgz#e04d21d755cf6341357eaefffda42a511f71e0cd"
   integrity sha1-4E0h11XPY0E1fq7//aQqUR9x4M0=
 
+cloudinary@1.19.0:
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.19.0.tgz#333dafb53ee32efea5457e28a80ecb8f6d31e48c"
+  integrity sha512-oEz4Fsqshd9SI7UAvF1CCyAmt3wgsv8tK1eRY0900gQaq+wP8TAzpruxpbQCmxvF6gL9Po7OpO0m0Jefx6uK8w==
+  dependencies:
+    lodash "^4.17.11"
+    q "^1.5.1"
+    typescript "^2.9.2"
+
 cloudinary@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.5.0.tgz#86f45673ff2967508fb5355a4e62b27e90bf947b"
   integrity sha1-hvRWc/8pZ1CPtTVaTmKyfpC/lHs=
-  dependencies:
-    lodash "3.10.x"
-    q "1.4.x"
-
-cloudinary@1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.7.0.tgz#8e5fa61c3e084a3410de782b73164267302d9667"
-  integrity sha1-jl+mHD4ISjQQ3ngrcxZCZzAtlmc=
   dependencies:
     lodash "3.10.x"
     q "1.4.x"
@@ -6216,6 +6217,11 @@ q@1.4.x, q@~1.4.0:
   resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
   integrity sha1-VXBbzZPF82c1MMLCy8DCs63cKG4=
 
+q@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
+  integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
+
 qs@2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/qs/-/qs-2.3.3.tgz#e9e85adbe75da0bbe4c8e0476a086290f863b404"
@@ -7992,6 +7998,11 @@ typedarray@^0.0.6, typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
+  integrity sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
 
 ua-parser-js@^0.7.18:
   version "0.7.20"
