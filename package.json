@@ -6,7 +6,7 @@
     "node": "^10.16.0"
   },
   "dependencies": {
-    "async": "2.1.4",
+    "async": "3.2.0",
     "bootswatch": "^4.3.1",
     "cloudinary": "1.7.0",
     "dotenv": "4.0.0",
