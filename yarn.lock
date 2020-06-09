@@ -1834,18 +1834,19 @@ cloudinary-microurl@1.0.2:
   resolved "https://registry.yarnpkg.com/cloudinary-microurl/-/cloudinary-microurl-1.0.2.tgz#e04d21d755cf6341357eaefffda42a511f71e0cd"
   integrity sha1-4E0h11XPY0E1fq7//aQqUR9x4M0=
 
+cloudinary@1.22.0:
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.22.0.tgz#48a36aab98838f910d350300419e2b10e4eb7e6b"
+  integrity sha512-qQhSVqGyOWtGbPc3JrwyUXJEZpdqsEzBFSf5+gTo7gbKbXdzEysLagigoSlp6JYI7YW2oEbz4aeZlgN2ucOkzQ==
+  dependencies:
+    core-js "^3.6.5"
+    lodash "^4.17.11"
+    q "^1.5.1"
+
 cloudinary@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.5.0.tgz#86f45673ff2967508fb5355a4e62b27e90bf947b"
   integrity sha1-hvRWc/8pZ1CPtTVaTmKyfpC/lHs=
-  dependencies:
-    lodash "3.10.x"
-    q "1.4.x"
-
-cloudinary@1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.7.0.tgz#8e5fa61c3e084a3410de782b73164267302d9667"
-  integrity sha1-jl+mHD4ISjQQ3ngrcxZCZzAtlmc=
   dependencies:
     lodash "3.10.x"
     q "1.4.x"
@@ -2070,6 +2071,11 @@ core-js@^2.4.0, core-js@^2.5.0:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.9.tgz#6b4b214620c834152e179323727fc19741b084f2"
   integrity sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A==
+
+core-js@^3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
+  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -6215,6 +6221,11 @@ q@1.4.x, q@~1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
   integrity sha1-VXBbzZPF82c1MMLCy8DCs63cKG4=
+
+q@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
+  integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
 qs@2.3.3:
   version "2.3.3"
